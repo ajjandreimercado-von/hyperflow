@@ -99,7 +99,7 @@ class _WaveProgressState extends State<WaveProgress>
               width: 128,
               height: 20,
               decoration: BoxDecoration(
-                color: colors.primary.withValues(alpha: 0.1),
+                color: colors.primary.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(100),
               ),
             ),
@@ -109,7 +109,7 @@ class _WaveProgressState extends State<WaveProgress>
           Positioned.fill(
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.3),
+                color: Colors.white.withOpacity(0.3),
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(16),
                   topRight: Radius.circular(16),
@@ -117,17 +117,17 @@ class _WaveProgressState extends State<WaveProgress>
                   bottomRight: Radius.circular(40),
                 ),
                 border: Border.all(
-                  color: Colors.white.withValues(alpha: 0.8),
+                  color: Colors.white.withOpacity(0.8),
                   width: 3,
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.white.withValues(alpha: 0.2),
+                    color: Colors.white.withOpacity(0.2),
                     blurRadius: 20,
                     offset: const Offset(0, -10),
                   ),
                   BoxShadow(
-                    color: colors.primary.withValues(alpha: 0.15),
+                    color: colors.primary.withOpacity(0.15),
                     blurRadius: 35,
                     offset: const Offset(0, 15),
                   ),
@@ -147,15 +147,9 @@ class _WaveProgressState extends State<WaveProgress>
                           waterLevel: _waterLevelAnimation.value,
                           wavePhase: _waveController.value * 2 * pi,
                           isEmpty: widget.isEmpty,
-                          liquidTop: widget.isEmpty
-                              ? const Color(0xFFE2E8F0)
-                              : colors.liquidTop,
-                          liquidBottom: widget.isEmpty
-                              ? const Color(0xFFCBD5E1)
-                              : colors.liquidBottom,
-                          waveColor: widget.isEmpty
-                              ? Colors.white.withValues(alpha: 0.6)
-                              : colors.waveOverlay.withValues(alpha: 0.6),
+                          liquidTop: colors.liquidTop,
+                          liquidBottom: colors.liquidBottom,
+                          waveColor: colors.waveOverlay.withOpacity(0.6),
                         ),
                       );
                     },
@@ -173,7 +167,7 @@ class _WaveProgressState extends State<WaveProgress>
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
                           colors: [
-                            Colors.white.withValues(alpha: 0.6),
+                            Colors.white.withOpacity(0.6),
                             Colors.transparent,
                           ],
                         ),
@@ -192,7 +186,7 @@ class _WaveProgressState extends State<WaveProgress>
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
                           colors: [
-                            Colors.white.withValues(alpha: 0.4),
+                            Colors.white.withOpacity(0.4),
                             Colors.transparent,
                           ],
                         ),
@@ -380,7 +374,7 @@ class _CuteFace extends StatelessWidget {
           width: 14,
           height: 10,
           decoration: BoxDecoration(
-            color: const Color(0xFFF472B6).withValues(alpha: 0.7),
+            color: const Color(0xFFF472B6).withOpacity(0.7),
             borderRadius: BorderRadius.circular(100),
           ),
         ),
@@ -419,7 +413,7 @@ class _CuteFace extends StatelessWidget {
           width: 14,
           height: 10,
           decoration: BoxDecoration(
-            color: const Color(0xFFF472B6).withValues(alpha: 0.7),
+            color: const Color(0xFFF472B6).withOpacity(0.7),
             borderRadius: BorderRadius.circular(100),
           ),
         ),
@@ -435,7 +429,7 @@ class _EyePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = const Color(0xFF0F172A).withValues(alpha: 0.8)
+      ..color = const Color(0xFF0F172A).withOpacity(0.8)
       ..strokeWidth = 3
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round
@@ -464,7 +458,7 @@ class _MouthPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = const Color(0xFF0F172A).withValues(alpha: 0.8)
+      ..color = const Color(0xFF0F172A).withOpacity(0.8)
       ..strokeWidth = 3
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round;
@@ -496,7 +490,7 @@ class _Bubble extends StatelessWidget {
       width: size,
       height: size,
       decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: opacity),
+        color: Colors.white.withOpacity(opacity),
         shape: BoxShape.circle,
       ),
     );
@@ -548,8 +542,8 @@ class _SplashDrop extends StatelessWidget {
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   colors: [
-                    color.withValues(alpha: 0.8),
-                    color.withValues(alpha: 0.4),
+                    color.withOpacity(0.8),
+                    color.withOpacity(0.4),
                   ],
                 ),
                 borderRadius: BorderRadius.only(
@@ -559,12 +553,12 @@ class _SplashDrop extends StatelessWidget {
                   bottomRight: Radius.circular(size * 0.5),
                 ),
                 border: Border.all(
-                  color: Colors.white.withValues(alpha: 0.6),
+                  color: Colors.white.withOpacity(0.6),
                   width: 1,
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: color.withValues(alpha: 0.3),
+                    color: color.withOpacity(0.3),
                     blurRadius: 10,
                     offset: const Offset(0, 4),
                   ),

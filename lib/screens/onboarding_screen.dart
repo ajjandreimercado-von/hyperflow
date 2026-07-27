@@ -114,7 +114,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                             ),
                             BoxShadow(
                               color: const Color(0xFF0EA5E9)
-                                  .withValues(alpha: 0.5),
+                                  .withOpacity(0.5),
                               blurRadius: 40,
                               offset: const Offset(0, 15),
                             ),
@@ -451,9 +451,9 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                       fontWeight: FontWeight.w700,
                       color: selected
                           ? const Color(0xFF0284C7)
-                              .withValues(alpha: 0.7)
+                              .withOpacity(0.7)
                           : AppTheme.textPrimary
-                              .withValues(alpha: 0.7),
+                              .withOpacity(0.7),
                     ),
                   ),
                 ],
@@ -467,8 +467,8 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                 fontWeight: FontWeight.w700,
                 letterSpacing: 1.5,
                 color: selected
-                    ? const Color(0xFF0284C7).withValues(alpha: 0.8)
-                    : AppTheme.textMuted.withValues(alpha: 0.8),
+                    ? const Color(0xFF0284C7).withOpacity(0.8)
+                    : AppTheme.textMuted.withOpacity(0.8),
               ),
             ),
           ],

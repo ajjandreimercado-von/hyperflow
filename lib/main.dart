@@ -75,7 +75,7 @@ class MainRouter extends StatelessWidget {
                         ),
                         BoxShadow(
                           color: const Color(0xFF0EA5E9)
-                              .withValues(alpha: 0.4),
+                              .withOpacity(0.4),
                           blurRadius: 30,
                           offset: const Offset(0, 10),
                         ),

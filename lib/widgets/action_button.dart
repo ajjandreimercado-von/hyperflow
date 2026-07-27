@@ -45,7 +45,7 @@ class _ActionButtonState extends State<ActionButton> {
     if (widget.border) {
       bgColor = Colors.white;
       textColor = colors.primary;
-      borderColor = colors.primaryLight.withValues(alpha: 0.4);
+      borderColor = colors.primaryLight.withOpacity(0.4);
       shadowColor = colors.borderLight;
       gradient = null;
     } else if (widget.active) {
@@ -108,7 +108,7 @@ class _ActionButtonState extends State<ActionButton> {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
-                        Colors.white.withValues(alpha: 0.3),
+                        Colors.white.withOpacity(0.3),
                         Colors.transparent,
                       ],
                     ),
@@ -147,7 +147,7 @@ class _ActionButtonState extends State<ActionButton> {
                       fontSize: 9,
                       fontWeight: FontWeight.w700,
                       color: widget.active
-                          ? Colors.white.withValues(alpha: 0.9)
+                          ? Colors.white.withOpacity(0.9)
                           : AppTheme.textMuted,
                       letterSpacing: 1,
                     ),

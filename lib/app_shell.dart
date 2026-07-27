@@ -52,8 +52,8 @@ class _AppShellState extends State<AppShell> {
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         colors: [
-                          colors.primaryLight.withValues(alpha: 0.3),
-                          colors.primaryLight.withValues(alpha: 0.05),
+                          colors.primaryLight.withOpacity(0.3),
+                          colors.primaryLight.withOpacity(0.05),
                         ],
                       ),
                       borderRadius: const BorderRadius.only(
@@ -75,8 +75,8 @@ class _AppShellState extends State<AppShell> {
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         colors: [
-                          colors.primary.withValues(alpha: 0.2),
-                          colors.primary.withValues(alpha: 0.02),
+                          colors.primary.withOpacity(0.2),
+                          colors.primary.withOpacity(0.02),
                         ],
                       ),
                       borderRadius: const BorderRadius.only(

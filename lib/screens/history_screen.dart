@@ -82,7 +82,7 @@ class HistoryScreen extends StatelessWidget {
                       offset: const Offset(0, 8),
                     ),
                     BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.05),
+                      color: Colors.black.withOpacity(0.05),
                       blurRadius: 30,
                       offset: const Offset(0, 15),
                     ),
@@ -336,7 +336,7 @@ class HistoryScreen extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 9,
                               fontWeight: FontWeight.w700,
-                              color: Colors.white.withValues(alpha: 0.8),
+                              color: Colors.white.withOpacity(0.8),
                               letterSpacing: 2,
                             ),
                           ),
@@ -358,7 +358,7 @@ class HistoryScreen extends StatelessWidget {
                                     fontSize: 13,
                                     fontWeight: FontWeight.w700,
                                     color: Colors.white
-                                        .withValues(alpha: 0.7),
+                                        .withOpacity(0.7),
                                   ),
                                 ),
                               ],

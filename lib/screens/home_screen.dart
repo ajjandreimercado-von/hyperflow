@@ -109,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   border: Border.all(color: AppTheme.cardBorder),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.03),
+                      color: Colors.black.withOpacity(0.03),
                       blurRadius: 8,
                       offset: const Offset(0, 2),
                     ),
@@ -134,7 +134,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ? [
                                   BoxShadow(
                                     color: btnColors.primary
-                                        .withValues(alpha: 0.4),
+                                        .withOpacity(0.4),
                                     blurRadius: 8,
                                     offset: const Offset(0, 2),
                                   ),
@@ -211,7 +211,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       offset: const Offset(0, 6),
                     ),
                     BoxShadow(
-                      color: colors.primary.withValues(alpha: 0.1),
+                      color: colors.primary.withOpacity(0.1),
                       blurRadius: 30,
                       offset: const Offset(0, 15),
                     ),
@@ -250,12 +250,12 @@ class _HomeScreenState extends State<HomeScreen> {
               Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.6),
+                  color: Colors.white.withOpacity(0.6),
                   borderRadius: BorderRadius.circular(32),
                   border: Border.all(color: Colors.white),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.04),
+                      color: Colors.black.withOpacity(0.04),
                       blurRadius: 30,
                       offset: const Offset(0, 8),
                     ),

@@ -30,12 +30,12 @@ class HydroNavBar extends StatelessWidget {
             color: Colors.white,
             borderRadius: BorderRadius.circular(32),
             border: Border.all(
-              color: colors.borderLight.withValues(alpha: 0.5),
+              color: colors.borderLight.withOpacity(0.5),
               width: 2,
             ),
             boxShadow: [
               BoxShadow(
-                color: colors.primary.withValues(alpha: 0.15),
+                color: colors.primary.withOpacity(0.15),
                 blurRadius: 40,
                 offset: const Offset(0, 15),
               ),
@@ -117,7 +117,7 @@ class _NavButton extends StatelessWidget {
                 boxShadow: active
                     ? [
                         BoxShadow(
-                          color: colors.primary.withValues(alpha: 0.1),
+                          color: colors.primary.withOpacity(0.1),
                           blurRadius: 10,
                           offset: const Offset(0, 4),
                         ),
