@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'providers/app_provider.dart';
 import 'theme/app_theme.dart';
 import 'screens/onboarding_screen.dart';
+import 'screens/splash_screen.dart';
 import 'app_shell.dart';
 
 import 'services/notification_service.dart';
@@ -36,14 +37,14 @@ class HydroFlowApp extends StatelessWidget {
         title: 'HydroFlow',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.buildTheme(),
-        home: const _AppRouter(),
+        home: const SplashScreen(),
       ),
     );
   }
 }
 
-class _AppRouter extends StatelessWidget {
-  const _AppRouter();
+class MainRouter extends StatelessWidget {
+  const MainRouter({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -186,8 +186,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
               // Wave Progress Cup
               WaveProgress(
-                percentage: remainingPercentage,
-                isEmpty: isEmpty,
+                percentage: percentage / 100,
+                isEmpty: percentage == 0,
                 beverageType: theme,
               ),
 
@@ -261,57 +261,61 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ],
                 ),
-                child: Row(
-                  children: [
-                    ActionButton(
-                      icon: Icons.add_rounded,
-                      label: 'Custom',
-                      onTap: () => _handleDrink(context, 100, theme),
-                      border: true,
-                      colorScheme: theme,
-                    ),
-                    const SizedBox(width: 12),
-                    ActionButton(
-                      icon: Icons.water_drop_rounded,
-                      iconColor: theme == ThemeType.water
-                          ? Colors.white
-                          : const Color(0xFF0EA5E9),
-                      label: '${state.settings.glassSizeMl}ml',
-                      sublabel: 'WATER',
-                      onTap: () => _handleDrink(
-                          context,
-                          state.settings.glassSizeMl,
-                          ThemeType.water),
-                      active: theme == ThemeType.water,
-                      colorScheme: ThemeType.water,
-                    ),
-                    const SizedBox(width: 12),
-                    ActionButton(
-                      icon: Icons.coffee_rounded,
-                      iconColor: theme == ThemeType.coffee
-                          ? Colors.white
-                          : const Color(0xFFD97706),
-                      label: '350ml',
-                      sublabel: 'COFFEE',
-                      onTap: () =>
-                          _handleDrink(context, 350, ThemeType.coffee),
-                      active: theme == ThemeType.coffee,
-                      colorScheme: ThemeType.coffee,
-                    ),
-                    const SizedBox(width: 12),
-                    ActionButton(
-                      icon: Icons.water_drop_rounded,
-                      iconColor: theme == ThemeType.smoothie
-                          ? Colors.white
-                          : const Color(0xFFEC4899),
-                      label: '500ml',
-                      sublabel: 'SMOOTHIE',
-                      onTap: () =>
-                          _handleDrink(context, 500, ThemeType.smoothie),
-                      active: theme == ThemeType.smoothie,
-                      colorScheme: ThemeType.smoothie,
-                    ),
-                  ],
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
+                  child: Row(
+                    children: [
+                      ActionButton(
+                        icon: Icons.add_rounded,
+                        label: 'Custom',
+                        onTap: () => _handleDrink(context, 100, theme),
+                        border: true,
+                        colorScheme: theme,
+                      ),
+                      const SizedBox(width: 12),
+                      ActionButton(
+                        icon: Icons.water_drop_rounded,
+                        iconColor: theme == ThemeType.water
+                            ? Colors.white
+                            : const Color(0xFF0EA5E9),
+                        label: '${state.settings.glassSizeMl}ml',
+                        sublabel: 'WATER',
+                        onTap: () => _handleDrink(
+                            context,
+                            state.settings.glassSizeMl,
+                            ThemeType.water),
+                        active: theme == ThemeType.water,
+                        colorScheme: ThemeType.water,
+                      ),
+                      const SizedBox(width: 12),
+                      ActionButton(
+                        icon: Icons.coffee_rounded,
+                        iconColor: theme == ThemeType.coffee
+                            ? Colors.white
+                            : const Color(0xFFD97706),
+                        label: '350ml',
+                        sublabel: 'COFFEE',
+                        onTap: () =>
+                            _handleDrink(context, 350, ThemeType.coffee),
+                        active: theme == ThemeType.coffee,
+                        colorScheme: ThemeType.coffee,
+                      ),
+                      const SizedBox(width: 12),
+                      ActionButton(
+                        icon: Icons.water_drop_rounded,
+                        iconColor: theme == ThemeType.smoothie
+                            ? Colors.white
+                            : const Color(0xFFEC4899),
+                        label: '500ml',
+                        sublabel: 'SMOOTHIE',
+                        onTap: () =>
+                            _handleDrink(context, 500, ThemeType.smoothie),
+                        active: theme == ThemeType.smoothie,
+                        colorScheme: ThemeType.smoothie,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
