@@ -15,7 +15,6 @@ void main() async {
   // Initialize notifications
   final notificationService = NotificationService();
   await notificationService.init();
-  await notificationService.requestPermissions();
 
   // Set status bar style
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(

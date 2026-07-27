@@ -6,6 +6,7 @@ import 'screens/home_screen.dart';
 import 'screens/history_screen.dart';
 import 'screens/settings_screen.dart';
 import 'widgets/nav_bar.dart';
+import 'services/notification_service.dart';
 
 class AppShell extends StatefulWidget {
   const AppShell({super.key});
@@ -16,6 +17,15 @@ class AppShell extends StatefulWidget {
 
 class _AppShellState extends State<AppShell> {
   int _activeTab = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    // Request permissions after the UI has loaded
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      NotificationService().requestPermissions();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
