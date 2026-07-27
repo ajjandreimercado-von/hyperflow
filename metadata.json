@@ -1,0 +1,6 @@
+{
+  "name": "HydroFlow",
+  "description": "A personal water-drinking reminder app.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
